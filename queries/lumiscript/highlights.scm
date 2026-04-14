@@ -4,6 +4,8 @@
   "key"
   "var"
   "let"
+  "for"
+  "in"
   "init"
   "update"
   "render"
@@ -30,6 +32,7 @@
   "%"
   "&&"
   "||"
+  ".."
 ] @operator
 
 [
@@ -37,6 +40,8 @@
   "}"
   "("
   ")"
+  "["
+  "]"
 ] @punctuation.bracket
 
 "," @punctuation.delimiter
@@ -59,7 +64,13 @@
   name: (identifier) @variable)
 
 (assignment_statement
-  name: (identifier) @variable)
+  target: (identifier) @variable)
+
+(for_statement
+  name: (identifier) @variable.parameter)
+
+(index_expression
+  array: (identifier) @variable.member)
 
 (call_expression
   function: (identifier) @function.call)

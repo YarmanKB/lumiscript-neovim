@@ -8,6 +8,7 @@ This repository provides:
 - `nvim-treesitter` parser registration
 - Tree-sitter highlight queries
 - Tree-sitter indent queries
+- query support for arrays, indexed access, and `for` loops
 
 By default this plugin assumes the parser lives at:
 
