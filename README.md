@@ -12,7 +12,7 @@ This repository provides:
 
 By default this plugin assumes the parser lives at:
 
-`https://github.com/jayadamsmorgan/lumiscript-treesitter`
+`https://github.com/YarmanKB/lumiscript-treesitter`
 
 If you want to override that, set:
 
@@ -28,7 +28,7 @@ Example with `lazy.nvim`:
 
 ```lua
 {
-  "jayadamsmorgan/lumiscript-neovim",
+  "YarmanKB/lumiscript-neovim",
   ft = "lumiscript",
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
@@ -55,7 +55,7 @@ require("lazy").setup({
     end,
   },
   {
-    "jayadamsmorgan/lumiscript-neovim",
+    "YarmanKB/lumiscript-neovim",
     ft = "lumiscript",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
