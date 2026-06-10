@@ -51,6 +51,20 @@
 
 (identifier) @variable
 
+((
+  identifier
+) @constant.builtin
+  (#any-of? @constant.builtin
+    "x"
+    "y"
+    "dt"
+    "delta_ms"
+    "speed"
+    "pressed"
+    "press"
+    "pressed_percentage")
+  (#set! priority 105))
+
 (type_declaration
   value: [
     "static"
@@ -74,6 +88,27 @@
 
 (call_expression
   function: (identifier) @function.call)
+
+(call_expression
+  function: (identifier) @function.builtin
+  (#any-of? @function.builtin
+    "abs"
+    "sin"
+    "cos"
+    "sqrt"
+    "ceil"
+    "floor"
+    "round"
+    "clamp"
+    "dist"
+    "lerp"
+    "min"
+    "max"
+    "pow"
+    "rand"
+    "rgb"
+    "hsv")
+  (#set! priority 105))
 
 (color_statement
   "color" @keyword.return)
