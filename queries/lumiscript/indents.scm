@@ -1,5 +1,8 @@
-((block) @indent.begin
+(block
+  "{" @indent.begin
   (#set! indent.immediate 1))
 
 (block
-  "}" @indent.end @indent.branch)
+  "}" @indent.end)
+
+(block) @indent.branch
